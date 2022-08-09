@@ -1,0 +1,13 @@
+{
+  "name": "uniswap-starter",
+  "scripts": {
+    "uniswap:init": "./uniswap/init.sh",
+    "uniswap:start": "cd uniswap/interface && yarn start"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "dotenv": "^16.0.1",
+    "hardhat": "^2.10.1",
+    "hardhat-deploy": "^0.11.12"
+  }
+}

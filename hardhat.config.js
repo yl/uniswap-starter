@@ -2,8 +2,6 @@ require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 require('hardhat-deploy');
 
-const settings = { optimizer: { enabled: true, runs: 1000000 } };
-
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "hardhat",
@@ -18,12 +16,22 @@ module.exports = {
     compilers: [
       {
         version: '0.6.6',
-        settings
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
       },
       {
-        version: '0.8.9',
-        settings
-      }
+        version: "0.8.18",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200,
+          },
+        },
+      },
     ]
   },
   namedAccounts: {
@@ -33,7 +41,7 @@ module.exports = {
   },
   verify: {
     etherscan: {
-      apiKey: process.env.BSCSCAN_KEY
+      apiKey: process.env.ETHERSCAN_KEY
     },
   }
 };

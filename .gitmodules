@@ -1,0 +1,9 @@
+[submodule "contracts/uniswap"]
+	path = contracts/uniswap
+	url = https://github.com/yl/uniswap-v2-contracts.git
+[submodule "uniswap/interface"]
+	path = uniswap/interface
+	url = https://github.com/yl/uniswap-v2-interface.git
+[submodule "uniswap/sdk"]
+	path = uniswap/sdk
+	url = https://github.com/yl/uniswap-v2-sdk.git
